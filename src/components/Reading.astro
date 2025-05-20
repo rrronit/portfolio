@@ -1,0 +1,51 @@
+---
+let books = [
+	{
+		title: "speeding up javascript",
+		link: "https://marvinh.dev/blog/speeding-up-javascript-ecosystem/",
+		description: "one library at a time",
+	},
+	{
+		title: "untangling lifetimes",
+		link: "https://www.rfleury.com/p/untangling-lifetimes-the-arena-allocator",
+		description: "the arena allocator",
+	},
+	{
+		title: "computer systems",
+		description: "a programmer's perspective",
+	},
+];
+---
+
+<div class="w-full text-slate-300 py-4 px-4 sm:px-6 md:px-8">
+	<div class="max-w-3xl mx-auto">
+		<h2 class="text-2xl font-semibold text-slate-200 mb-3">Currently Reading</h2>
+		<div class="space-y-3">
+			{
+				books.map((book) =>
+					book.link ? (
+						<a href={book.link} class="block border-l-2 border-[#ac9780] pl-3 py-1 group w-fit" target="_blank" rel="noopener noreferrer">
+							<span class="text-md font-medium text-[#ac9780] group-hover:text-[#d2b79c] transition-colors">
+								{book.title}
+							</span>
+							<span class="mx-1">—</span>
+							<span class="text-slate-300 text-sm">
+								{book.description}
+							</span>
+						</a>
+					) : (
+						<div class="block border-l-2 border-[#ac9780] pl-3 py-1 w-fit">
+							<span class="text-md font-medium text-[#ac9780]">
+								{book.title}
+							</span>
+							<span class="mx-1">—</span>
+							<span class="text-slate-300 text-sm">
+								{book.description}
+							</span>
+						</div>
+					)
+				)
+			}
+		</div>
+	</div>
+</div>

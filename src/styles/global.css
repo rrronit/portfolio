@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --font-space-mono: 'Space Mono', monospace;
+}
+
+body {
+  font-family: var(--font-space-mono);
+}
+
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.4) 1px, transparent 1px);
+    background-size: 2px 2px;
+    background-repeat: repeat;
+}

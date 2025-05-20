@@ -1,0 +1,53 @@
+---
+let projects = [
+	{
+		name: "scythe",
+		description: "sql-like database in rust",
+		link: "https://github.com/rrronit/scythe",
+	},
+	{
+		name: "flash",
+		description: "secure code execution engine for multiple languages",
+		link: "https://github.com/rrronit/flash",
+	},
+	{
+		name: "merc",
+		description: "a programming language with modern syntax",
+		link: "https://github.com/rrronit/mercury",
+	},
+	{
+		name: "pulse",
+		description: "redis-like in-memory data structure server",
+		link: "https://github.com/rrronit/pulse",
+	},
+];
+---
+
+<div class="w-full text-slate-300 py-4 px-4 sm:px-6 md:px-8">
+	<div class="max-w-3xl mx-auto">
+		<h2 class="text-2xl font-semibold text-slate-200 mb-3">Projects</h2>
+		<p class="mb-4 text-slate-300">things i've built:</p>
+
+		<div class="space-y-3">
+			{
+				projects.map((project) => (
+					<div class="border-l-2 border-[#ac9780] pl-3 py-1 w-fit">
+						<a
+							href={project.link}
+							class="block group"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<h3 class="text-md font-medium text-[#ac9780] group-hover:text-[#d2b79c] transition-colors">
+								{project.name}
+							</h3>
+							<p class="text-slate-300 text-sm">
+								{project.description}
+							</p>
+						</a>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</div>
